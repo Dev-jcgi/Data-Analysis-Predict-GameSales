@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de Ventas de Videojuegos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: rgba(248, 173, 59, 1.0);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            background-image: url('https://d2j6dbq0eux0bg.cloudfront.net/images/43093237/3601039288.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 200px; /* Ajusta el ancho según sea necesario */
+            height: 100px; /* Ajusta la altura según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(248, 173, 59, 1.0); /* Color de texto */
+        }
+
+        select,
+        input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #d1d5da;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: rgba(248, 173, 59, 1.0); /* Color de texto */
+        }
+
+        input[type="submit"] {
+            background-color: rgba(248, 173, 59, 1.0); /* Color de fondo del botón */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(218, 148, 0, 1.0); /* Cambio de color al pasar el mouse */
+        }
+
+        /* Agregar un efecto de sombra al enfocar los campos */
+        input:focus,
+        select:focus {
+            box-shadow: 0 0 8px rgba(3, 102, 214, 0.5);
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+    <h1>Introduce los detalles del juego</h1>
+    <form action="/predict" method="post">
+        <label for="genero">Género:</label>
+        <select name="genero" id="genero">
+            {% for genero in generos %}
+                <option value="{{ genero }}">{{ genero }}</option>
+            {% endfor %}
+        </select>
+        <label for="plataforma">Plataforma:</label>
+        <select name="plataforma" id="plataforma">
+            {% for plataforma in plataformas %}
+                <option value="{{ plataforma }}">{{ plataforma }}</option>
+            {% endfor %}
+        </select>
+        <label for="compania">Compañía de Desarrollo:</label>
+        <select name="compania" id="compania">
+            {% for compania in companias %}
+                <option value="{{ compania }}">{{ compania }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Predecir Ventas">
+    </form>
+</body>
+</html>

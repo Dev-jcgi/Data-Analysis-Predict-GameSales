@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .logo {
+            background-image: url('https://d2j6dbq0eux0bg.cloudfront.net/images/43093237/3601039288.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 200px; /* Ajusta el ancho según sea necesario */
+            height: 100px; /* Ajusta la altura según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: rgba(248, 173, 59, 1.0);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: rgba(248, 173, 59, 1.0);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: rgba(248, 173, 59, 1.0);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: rgba(248, 173, 59, 1.0);
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            color: rgba(218, 148, 0, 1.0);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo"></div>
+    <h2>El promedio total de ventas globales para todas las plataformas es: 548394</h2>
+    <h1>{{ mensaje }}</h1>    
+    <h3>El resultado de la predicción es: {{ prediction*1000000}} </h3>   
+    <a href="/">Volver a la página de inicio</a>
+</body>
+</html>
