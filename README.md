@@ -1333,21 +1333,7 @@ select:focus {
 ![App.py](./img/html.gif)
 
 
-9.	Access your web application through a web browser by visiting the URL provided by Flask.
 
-![Result](./img/24.png)
-
-10.	Deployment:
-Deploy your web application on a server so that it is publicly available through an html file called result.html.
-
-```HTML
-<body>
-    <div class="logo"></div>
-    <h2>The average total global sales for all platforms is: 548394</h2>
-    <h1>{{ message }}</h1>    
-    <h3>The result of the prediction is: {{ prediction*1000000}} </h3>   
-    <a href="/">Return to homepage</to>
-</body>
 
 ```
 It is considered to use the github Code Spaces cloud hosting service for the deployment of the result.
